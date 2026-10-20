@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Wedding</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	
+	<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #fff9f5;
+            color: #5d4545;
+            font-family: "Poppins", sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* INVITATION COVER */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #f8dfe5 0,
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at bottom right,
+                    #f5e3c8 0,
+                    transparent 35%
+                ),
+                #fff9f5;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .small-text {
+            font-size: 13px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #a47777;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+			font-family: "Allura", cursive;
+			font-size: clamp(70px, 13vw, 140px);
+			font-weight: 400;
+			color: #9b626a;
+			line-height: 0.9;
+		}
+
+        .ampersand {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 55px;
+            color: #c99a6e;
+            margin: 15px 0;
+        }
+
+        .hero-date {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 25px;
+            letter-spacing: 3px;
+            margin-top: 30px;
+            color: #705555;
+        }
+
+        .hero-message {
+            max-width: 550px;
+            margin: 25px auto;
+            font-size: 15px;
+            line-height: 1.9;
+            color: #806a6a;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 75px;
+            }
+        }
+
+        /* Floating Flowers */
+        .petal {
+			position: fixed;
+			top: -50px;
+			width: 28px;
+			height: 28px;
+			animation: fall linear infinite;
+			opacity: 0.7;
+			pointer-events: none;
+			z-index: 10;
+		}
+
+		.petal svg {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+
+		/* Flower */
+		.petal.flower {
+			width: 30px;
+			height: 30px;
+		}
+
+		/* Single falling petal */
+		.petal.single-petal {
+			width: 20px;
+			height: 26px;
+		}
+
+		.petal:nth-child(1) {
+			left: 10%;
+			animation-duration: 9s;
+		}
+
+		.petal:nth-child(2) {
+			left: 30%;
+			animation-duration: 12s;
+			animation-delay: 2s;
+		}
+
+		.petal:nth-child(3) {
+			left: 55%;
+			animation-duration: 10s;
+			animation-delay: 4s;
+		}
+
+		.petal:nth-child(4) {
+			left: 80%;
+			animation-duration: 13s;
+			animation-delay: 1s;
+		}
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-50px) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            background:
+                radial-gradient(circle at top left, #f8dfe5 0, transparent 35%),
+                radial-gradient(circle at bottom right, #f5e3c8 0, transparent 35%),
+                #fff9f5;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .small-text {
+            font-size: 13px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #a47777;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: "Great Vibes", cursive;
+            font-size: clamp(70px, 13vw, 140px);
+            font-weight: 400;
+            color: #9b626a;
+            line-height: 0.9;
+        }
+		
+		/* Make name initials clearly capital */
+		.name-initial {
+			font-family: "Cormorant Garamond", serif;
+			font-size: 1.15em;
+			font-weight: 500;
+			display: inline-block;
+		}
+
+        .ampersand {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 55px;
+            color: #c99a6e;
+            margin: 15px 0;
+        }
+
+        .hero-date {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 25px;
+            letter-spacing: 3px;
+            margin-top: 30px;
+            color: #705555;
+        }
+
+        .hero-message {
+            max-width: 550px;
+            margin: 25px auto;
+            font-size: 15px;
+            line-height: 1.9;
+            color: #806a6a;
+        }
+
+        .scroll-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 13px 28px;
+            border: 1px solid #c99999;
+            border-radius: 40px;
+            color: #8e5d65;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .scroll-button:hover {
+            background: #9b626a;
+            color: white;
+        }
+
+        /* Sections */
+        section {
+            padding: 90px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: "Great Vibes", cursive;
+            font-size: 55px;
+            font-weight: 400;
+            color: #9b626a;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            color: #927b7b;
+            max-width: 600px;
+            margin: 0 auto 45px;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        /* Couple */
+        .couple {
+            background: #fff;
+        }
+
+        .couple-photo {
+            width: 250px;
+            height: 320px;
+            margin: 30px auto;
+            border-radius: 130px 130px 20px 20px;
+            object-fit: cover;
+            border: 8px solid #f6e8e3;
+            box-shadow: 0 20px 50px rgba(100, 60, 60, 0.12);
+        }
+
+        .couple-names {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 40px;
+            color: #705050;
+        }
+
+        /* Wedding Events */
+		.events {
+			background: #fcf0ed;
+			padding: 100px 20px;
+		}
+
+		.events-wrapper {
+			max-width: 1100px;
+			margin: 60px auto 0;
+		}
+
+		.event-row {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 60px;
+			align-items: center;
+			margin-bottom: 90px;
+		}
+
+		/* Alternate image/text direction */
+		.event-row:nth-child(even) {
+			direction: rtl;
+		}
+
+		.event-row:nth-child(even) .event-content {
+			direction: ltr;
+		}
+
+		.event-row:nth-child(even) .event-image-wrapper {
+			direction: ltr;
+		}
+
+		/* Event Image */
+		.event-image-wrapper {
+			position: relative;
+		}
+
+		.event-image {
+			width: 100%;
+			height: 480px;
+			object-fit: cover;
+			display: block;
+			border-radius: 180px 180px 25px 25px;
+			border: 8px solid rgba(255, 255, 255, 0.8);
+			box-shadow: 0 20px 50px rgba(100, 60, 60, 0.15);
+		}
+
+		/* Event Content */
+		.event-content {
+			text-align: left;
+		}
+
+		.event-number {
+			font-family: "Cormorant Garamond", serif;
+			font-size: 18px;
+			color: #bd8b8b;
+			letter-spacing: 3px;
+			margin-bottom: 8px;
+		}
+
+		.event-content h3 {
+			font-family: "Great Vibes", cursive;
+			font-size: 58px;
+			font-weight: 400;
+			color: #9b626a;
+			line-height: 1;
+			margin-bottom: 12px;
+		}
+
+		.event-date {
+			font-size: 12px;
+			color: #a06e6e;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			margin-bottom: 22px;
+		}
+
+		.event-story {
+			font-family: "Cormorant Garamond", serif;
+			font-size: 21px;
+			line-height: 1.7;
+			color: #705858;
+			margin-bottom: 25px;
+		}
+
+		.event-description {
+			font-size: 14px;
+			line-height: 1.9;
+			color: #806d6d;
+			margin-bottom: 25px;
+		}
+
+		/* Outfit */
+		.outfit-box {
+			background: rgba(255, 255, 255, 0.6);
+			border: 1px solid #efd8d2;
+			border-radius: 18px;
+			padding: 18px 20px;
+			margin-bottom: 25px;
+		}
+
+		.outfit-title {
+			font-size: 11px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			color: #a06e6e;
+			margin-bottom: 7px;
+		}
+
+		.outfit-text {
+			font-size: 13px;
+			line-height: 1.7;
+			color: #806d6d;
+		}
+
+		/* Location */
+		.location-icon {
+			width: 16px;
+			height: 16px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 6px;
+			vertical-align: middle;
+		}
+
+		.location-icon svg {
+			width: 16px;
+			height: 16px;
+			stroke: currentColor;
+		}
+
+		.event-location {
+			display: flex;
+			align-items: flex-start;
+			gap: 10px;
+			margin-bottom: 20px;
+			color: #806d6d;
+			font-size: 13px;
+			line-height: 1.6;
+			text-align: center !important;
+		}
+
+		.map-button {
+			display: inline-block;
+			padding: 11px 21px;
+			border-radius: 30px;
+			background: #9b626a;
+			color: white;
+			text-decoration: none;
+			font-size: 12px;
+			transition: 0.3s;
+		}
+
+		.map-button:hover {
+			background: #7f4e57;
+			transform: translateY(-2px);
+		}
+
+		/* Decorative divider */
+		.event-divider {
+			width: 70px;
+			height: 1px;
+			background: #d8aeae;
+			margin: 0 auto 90px;
+		}
+
+		/* Tablet */
+		@media (max-width: 850px) {
+			.events {
+				padding: 80px 20px;
+			}
+
+			.event-row {
+				gap: 35px;
+				margin-bottom: 70px;
+			}
+
+			.event-image {
+				height: 400px;
+			}
+
+			.event-content h3 {
+				font-size: 48px;
+			}
+
+			.event-story {
+				font-size: 19px;
+			}
+		}
+
+		/* Mobile */
+		@media (max-width: 650px) {
+			.events {
+				padding: 70px 18px;
+			}
+
+			.events-wrapper {
+				margin-top: 40px;
+			}
+
+			.event-row,
+			.event-row:nth-child(even) {
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+				margin-bottom: 60px;
+				direction: ltr;
+			}
+
+			.event-image-wrapper {
+				width: 100%;
+			}
+
+			.event-image {
+				width: 100%;
+				height: 380px;
+				border-radius: 150px 150px 20px 20px;
+			}
+
+			.event-content {
+				width: 100%;
+				text-align: center;
+			}
+
+			.event-number {
+				font-size: 15px;
+			}
+
+			.event-content h3 {
+				font-size: 48px;
+			}
+
+			.event-date {
+				font-size: 10px;
+				letter-spacing: 1.5px;
+			}
+
+			.event-story {
+				font-size: 19px;
+			}
+
+			.event-description {
+				font-size: 13px;
+			}
+
+			.outfit-box {
+				text-align: left;
+			}
+
+			.event-location {
+				justify-content: center;
+				text-align: left;
+			}
+
+			.event-divider {
+				margin-bottom: 60px;
+			}
+		}
+
+		/* Small Phones */
+		@media (max-width: 400px) {
+			.event-image {
+				height: 320px;
+			}
+
+			.event-content h3 {
+				font-size: 43px;
+			}
+
+			.event-story {
+				font-size: 18px;
+			}
+		}
+		
+        /* Countdown */
+        .countdown {
+            background: #fff;
+        }
+
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .count-box {
+            width: 90px;
+            padding: 18px 10px;
+            background: #fcf0ed;
+            border-radius: 18px;
+        }
+
+        .count-box span {
+            display: block;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 35px;
+            color: #9b626a;
+        }
+
+        .count-box small {
+            color: #9a8181;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* RSVP */
+        .rsvp {
+            background:
+                linear-gradient(rgba(115,75,75,0.75), rgba(115,75,75,0.75)),
+                url("assets/background.jpeg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .rsvp .section-title {
+            color: white;
+        }
+
+        .rsvp p {
+            max-width: 550px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+        .rsvp-button {
+            display: inline-block;
+            background: white;
+            color: #8f6268;
+            padding: 14px 30px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 20px;
+            text-align: center;
+            background: #fff9f5;
+        }
+
+        footer .heart {
+			width: 32px;
+			height: 32px;
+			margin: 0 auto 15px;
+			color: #9b626a;
+		}
+
+		footer .heart svg {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+
+        footer h2 {
+			font-family: "Great Vibes", cursive;
+			font-size: 45px;
+			color: #9b626a;
+			font-weight: 400;
+			text-transform: none;
+		}
+
+        footer p {
+            font-size: 12px;
+            color: #a18b8b;
+            margin-top: 10px;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            section {
+                padding: 70px 18px;
+            }
+
+            .hero h1 {
+                font-size: 75px;
+            }
+
+            .section-title {
+                font-size: 48px;
+            }
+
+            .couple-photo {
+                width: 210px;
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+	<!-- Flower -->
+	<div class="petal flower">
+		<svg viewBox="0 0 40 40" aria-hidden="true">
+
+			<path d="M20 20
+					 C8 20 4 12 10 8
+					 C15 5 20 10 20 20Z"
+				  fill="#F4A261"/>
+
+			<path d="M20 20
+					 C20 8 28 4 32 10
+					 C35 15 30 20 20 20Z"
+				  fill="#F6B36A"/>
+
+			<path d="M20 20
+					 C32 20 36 28 30 32
+					 C25 35 20 30 20 20Z"
+				  fill="#F4A261"/>
+
+			<path d="M20 20
+					 C20 32 12 36 8 30
+					 C5 25 10 20 20 20Z"
+				  fill="#F6B36A"/>
+
+			<circle cx="20" cy="20" r="4" fill="#C97A2B"/>
+		</svg>
+	</div>
+
+	<!-- Single Petal -->
+	<div class="petal single-petal">
+		<svg viewBox="0 0 40 40" aria-hidden="true">
+			<path d="M20 36
+					 C14 29 9 23 11 16
+					 C13 9 20 5 25 9
+					 C31 14 27 25 20 36Z"
+				  fill="#7FA66A"/>
+		</svg>
+	</div>
+
+	<!-- Flower -->
+	<div class="petal flower">
+		<svg viewBox="0 0 40 40" aria-hidden="true">
+
+			<path d="M20 20
+					 C8 20 4 12 10 8
+					 C15 5 20 10 20 20Z"
+				  fill="#F4A261"/>
+
+			<path d="M20 20
+					 C20 8 28 4 32 10
+					 C35 15 30 20 20 20Z"
+				  fill="#F6B36A"/>
+
+			<path d="M20 20
+					 C32 20 36 28 30 32
+					 C25 35 20 30 20 20Z"
+				  fill="#F4A261"/>
+
+			<path d="M20 20
+					 C20 32 12 36 8 30
+					 C5 25 10 20 20 20Z"
+				  fill="#F6B36A"/>
+
+			<circle cx="20" cy="20" r="4" fill="#C97A2B"/>
+		</svg>
+	</div>
+
+	<!-- Single Petal -->
+	<div class="petal single-petal">
+		<svg viewBox="0 0 40 40" aria-hidden="true">
+			<path d="M20 36
+					 C14 29 9 23 11 16
+					 C13 9 20 5 25 9
+					 C31 14 27 25 20 36Z"
+				  fill="#7FA66A"/>
+		</svg>
+	</div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Small heading -->
+            <div class="small-text">
+                Together with their families
+            </div>
+
+            <!-- Bride -->
+            <h1>
+				Akshatha Angadi
+			</h1>
+
+            <!-- & -->
+            <div class="ampersand">
+                &
+            </div>
+
+            <!-- Groom -->
+            <h1>
+                Kiran Javali
+            </h1>
+
+            <!-- Wedding date -->
+            <div class="hero-date">
+                14 . 12 . 2026
+            </div>
+
+            <!-- Message -->
+            <p class="hero-message">
+                Two hearts, two families, one beautiful beginning. A new chapter of love unfolds, filled with cherished traditions, joyful moments, and memories to last a lifetime.
+            </p>
+        </div>
+    </section>
+
+    <!-- COUPLE -->
+    <section class="couple">
+        <h2 class="section-title">
+            The Beginning of Forever
+        </h2>
+
+        <p class="section-subtitle">
+            With the blessings of our families and hearts filled with happiness, Akshatha and Kiran begin their journey of togetherness, promising a lifetime of love, laughter, and companionship.
+        </p>
+
+        <!-- Replace this image URL with your own photo -->
+        <img class="couple-photo" src="assets/Couple.jpeg" alt="The couple">
+    </section>
+
+    <!-- EVENTS -->
+    <section class="events" id="details">
+		<h2 class="section-title">
+			Wedding Celebrations
+		</h2>
+
+		<p class="section-subtitle">
+			A beautiful series of celebrations filled with cherished traditions, heartfelt promises, and joyful memories as two families come together.
+		</p>
+
+		<div class="events-wrapper">
+			<!-- HALDI -->
+			<div class="event-row">
+				<div class="event-image-wrapper">
+					<img class="event-image" src="assets/Haldi.jpeg" alt="Haldi">
+				</div>
+
+				<div class="event-content">
+					<div class="event-number">
+						01 . THE BEGINNING
+					</div>
+
+					<h3>
+						Haldi
+					</h3>
+
+					<div class="event-date">
+						10 December 2026 - 10:00 AM
+					</div>
+
+					<p class="event-story">
+						A splash of yellow, a shower of blessings, and a morning filled with laughter. Our Haldi ceremony celebrates age-old traditions, the warmth of family, and the joyful beginning of the wedding festivities.
+					</p>
+
+					<p class="event-description">
+						From the playful application of haldi to cheerful moments with loved ones, this vibrant ceremony is all about happiness, positivity, and blessings for the journey ahead.
+					</p>
+
+					<div class="outfit-box">
+						<div class="outfit-title">
+							What to Wear
+						</div>
+
+						<div class="outfit-text">
+							Glamorous evening wear, elegant sarees, gowns, suits, or your favourite party outfit in yellow or golden hues. 💛✨
+						</div>
+					</div>
+
+					<div class="event-location">
+						
+						<span>
+							<strong>Venue Name</strong><br>
+							In bride's home, Gangavathi
+						</span>
+					</div>
+
+					<a href="https://maps.app.goo.gl/7qRkdnggiaUCu3j2A" target="_blank" class="map-button">
+						<span class="location-icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" fill="none"
+								 stroke="currentColor"
+								 stroke-width="1.8"
+								 stroke-linecap="round"
+								 stroke-linejoin="round">
+								<path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+								<circle cx="12" cy="10" r="2.5"></circle>
+							</svg>
+						</span>
+						View Location
+					</a>
+				</div>
+			</div>
+
+			<div class="event-divider"></div>
+			<!-- ENGAGEMENT -->
+			<div class="event-row">
+				<div class="event-image-wrapper">
+					<img class="event-image" src="assets/engagement.jpeg" alt="Engagement outfit">
+				</div>
+
+				<div class="event-content">
+					<div class="event-number">
+						02 . A PROMISE
+					</div>
+
+					<h3>
+						Engagement
+					</h3>
+
+					<div class="event-date">
+						13 December 2026 - 6:30 PM
+					</div>
+
+					<p class="event-story">
+						A promise of forever, sealed with rings and surrounded by love. Our engagement marks a beautiful milestone as two hearts commit to a shared future.
+					</p>
+
+					<p class="event-description">
+						An elegant evening of meaningful traditions, heartfelt blessings, happy conversations, and the exchange of rings that symbolises the beginning of a lifelong bond.
+					</p>
+
+					<div class="event-location">
+						<span>
+							<strong>Venue Name</strong><br>
+							Guledgudda
+						</span>
+					</div>
+
+					<a href="https://maps.google.com" target="_blank" class="map-button">
+						<span class="location-icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" fill="none"
+								 stroke="currentColor"
+								 stroke-width="1.8"
+								 stroke-linecap="round"
+								 stroke-linejoin="round">
+								<path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+								<circle cx="12" cy="10" r="2.5"></circle>
+							</svg>
+						</span>
+						View Location
+					</a>
+				</div>
+			</div>
+
+			<div class="event-divider"></div>
+			<!-- WEDDING -->
+			<div class="event-row">
+				<div class="event-image-wrapper">
+					<img class="event-image" src="assets/wedding.jpeg" alt="Wedding outfit">
+				</div>
+
+				<div class="event-content">
+					<div class="event-number">
+						03 . THE BIG DAY
+					</div>
+
+					<h3>
+						Wedding
+					</h3>
+
+					<div class="event-date">
+						14 December 2026 - 12:00 PM
+					</div>
+
+					<p class="event-story">
+						The most awaited chapter of our story begins here. With sacred vows, cherished traditions, and the blessings of our elders, two lives come together as one.
+					</p>
+
+					<p class="event-description">
+						A sacred celebration of love and commitment, marking the beginning of a new journey built on trust, understanding, and a promise to stand by each other through every season of life.
+					</p>
+
+					<div class="event-location">
+						<span>
+							<strong>Venue Name</strong><br>
+							Guledgudda
+						</span>
+					</div>
+
+					<a href="https://maps.google.com" target="_blank" class="map-button">
+						
+						<span class="location-icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" fill="none"
+								 stroke="currentColor"
+								 stroke-width="1.8"
+								 stroke-linecap="round"
+								 stroke-linejoin="round">
+								<path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+								<circle cx="12" cy="10" r="2.5"></circle>
+							</svg>
+						</span>
+						View Location
+					</a>
+				</div>
+			</div>
+
+			<div class="event-divider"></div>
+			<!-- RECEPTION -->
+			<div class="event-row">
+				<div class="event-image-wrapper">
+					<img class="event-image" src="assets/reception.jpg" alt="Reception outfit">
+				</div>
+
+				<div class="event-content">
+					<div class="event-number">
+						04 . LET'S CELEBRATE
+					</div>
+
+					<h3>
+						Reception
+					</h3>
+
+					<div class="event-date">
+						16 December 2026  12:30 PM
+					</div>
+
+					<p class="event-story">
+						A day of elegance, happiness, and togetherness as our families celebrate a beautiful new beginning. A gathering filled with warm smiles, heartfelt wishes, and moments to treasure.
+					</p>
+
+					<p class="event-description">
+						A joyful celebration featuring delicious food, wonderful company, and the warmth of family and friends, creating lasting memories as we step into this exciting chapter of life.
+					</p>
+
+					<div class="event-location">
+						<span>
+							<strong>Venue Name</strong><br>
+							Sri Channa Basava Swamy Kalyana Mantapa, Gangavathi
+						</span>
+					</div>
+
+					<a href="https://maps.app.goo.gl/8WvSPGrmW7NXvWbx8" target="_blank" class="map-button">
+						
+						<span class="location-icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" fill="none"
+								 stroke="currentColor"
+								 stroke-width="1.8"
+								 stroke-linecap="round"
+								 stroke-linejoin="round">
+								<path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+								<circle cx="12" cy="10" r="2.5"></circle>
+							</svg>
+						</span>
+						View Location
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown">
+        <h2 class="section-title">
+            Counting Down to Forever
+        </h2>
+
+        <p class="section-subtitle">
+            Every passing moment brings us closer to a celebration filled with love, laughter, and beautiful memories.
+        </p>
+
+        <div class="countdown-container">
+            <div class="count-box">
+                <span id="days">00</span>
+                <small>Days</small>
+            </div>
+
+            <div class="count-box">
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+
+            <div class="count-box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+
+            <div class="count-box">
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp">
+        <h2 class="section-title">
+            Your Presence, Our Happiness
+        </h2>
+
+        <p>
+            As we begin this beautiful journey together, your presence and blessings would make our celebrations even more meaningful. We would be delighted to have you share in the joy of all our wedding festivities and be part of the precious memories we create together.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="heart" aria-hidden="true">
+			<svg viewBox="0 0 24 24">
+				<path fill="currentColor"
+					  d="M12 21s-8-4.7-8-10.5C4 7.5 6.2 5 9 5c1.4 0 2.7.7 3 2
+						 0.3-1.3 1.6-2 3-2 2.8 0 5 2.5 5 5.5C20 16.3 12 21 12 21z"/>
+			</svg>
+		</div>
+
+        <h2>
+            Akshatha Angadi & Kiran Javali
+        </h2>
+
+        <p>
+            A lifetime of love begins with a beautiful celebration.
+        </p>
+
+        <p>
+            December 2026
+        </p>
+    </footer>
+
+    <!-- COUNTDOWN SCRIPT -->
+    <script>
+        const weddingDate = new Date("December 14, 2026 8:00:00").getTime();
+
+        const countdown = setInterval(function () {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(
+                distance / (1000 * 60 * 60 * 24)
+            );
+
+            const hours = Math.floor(
+                (distance % (1000 * 60 * 60 * 24))
+                / (1000 * 60 * 60)
+            );
+
+            const minutes = Math.floor(
+                (distance % (1000 * 60 * 60))
+                / (1000 * 60)
+            );
+
+            const seconds = Math.floor(
+                (distance % (1000 * 60))
+                / 1000
+            );
+
+            document.getElementById("days").innerText = String(days).padStart(2, "0");
+            document.getElementById("hours").innerText = String(hours).padStart(2, "0");
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
+
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.querySelector(".countdown-container").innerHTML =
+                    "<h3>Today is the day! 💍💕</h3>";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
